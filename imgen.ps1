@@ -1,15 +1,15 @@
 ﻿param (
     [string]$platform = "all", # [all|android|ios|windowsmobile]
-    [string]$filename = "*", # nome do .svg a exportar (* ok)
+    [string]$filename = "*", # the name of the .svg source file (wildcards are ok)
     [string]$exportType = "png", # [png|pdf]
-    [int]$width = 16, # largura base
-    [int]$height = 16, # altura base
-    [string]$targetPath = ".\", # directoria de destino
-    [string]$commandFile, # path para um ficheiro de comandos
-    [string]$prefix, # prefixo para o nome
-    [string]$sufix, # sufixo para o nome
-    [switch]$freeze, # as imagens geradas não são transferidas para as diretorias finais
-    [switch]$single,                 # apenas a imagem de referência será gerada
+    [int]$width = 16, # reference width
+    [int]$height = 16, # reference height
+    [string]$targetPath = ".\", # target path
+    [string]$commandFile, # can use a file as a source for commands
+    [string]$prefix, # optional prefix for the filename
+    [string]$sufix, # optional sufix for the filename 
+    [switch]$freeze, # the files generated are NOT transfered to the target path
+    [switch]$single, # only the base image (witn the defined width and height) will be created
     [switch]$quiet  # disable inkscape output
 )
 
